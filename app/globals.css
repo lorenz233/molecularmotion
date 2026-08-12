@@ -112,3 +112,61 @@ button { font:inherit;color:inherit; }
   .hand-panel.minimized { width:142px; }
   footer { height:24px; padding:0 16px; gap:28px; }
 }
+
+/* Short landscape screens need a second, denser composition so the chrome does
+   not crowd the model or collide with the footer. */
+@media (min-width: 761px) and (max-height: 680px) {
+  .topbar { height:40px; padding:0 16px; }
+  .brand { gap:7px; font-size:7px; }
+  .brand-orbit { width:23px; height:23px; }
+  .brand-orbit svg { width:14px; height:14px; }
+  .about-button { gap:5px; padding:6px 8px; font-size:5px; }
+  .about-button svg { width:13px; height:13px; }
+  .molecule-search { top:8px; width:min(360px,38vw); height:25px; gap:6px; padding:0 4px 0 9px; }
+  .molecule-search > svg { width:12px; height:12px; }
+  .molecule-search input { font-size:6px; }
+  .molecule-search button { width:19px; height:19px; }
+  .molecule-search button svg { width:11px; height:11px; }
+
+  .molecule-rail,
+  .viewer-wrap { top:40px; }
+  .molecule-rail { width:122px; bottom:20px; padding:14px 5px; }
+  .molecule-rail > p { margin:0 0 12px; font-size:6px; letter-spacing:.14em; }
+  .rail-list { gap:2px; }
+  .rail-item { height:55px; }
+  .rail-item.active::before { top:19px; height:17px; }
+  .rail-number { top:9px; left:5px; font-size:6px; }
+  .rail-name { left:5px; bottom:9px; font-size:6px; }
+  .mini-molecule { width:35px; height:22px; right:0; top:18px; transform:scale(.58); }
+  .mini-molecule i { width:10px; height:10px; }
+
+  .trip-field,
+  .laser-field { inset:40px 0 20px; }
+  .index-marker { top:8px; left:136px; font-size:26px; }
+  .index-marker span { font-size:5px; margin-left:4px; }
+  .drag-hint { bottom:61px; gap:5px; font-size:5px; }
+  .drag-hint svg { width:11px; height:11px; }
+  .drag-hint i { width:32px; }
+
+  .molecule-copy { top:38px; right:18px; width:220px; padding:15px; }
+  .eyebrow { gap:5px; margin-bottom:12px; font-size:5px; }
+  .eyebrow svg { width:10px; height:10px; }
+  .molecule-copy h1 { max-width:190px; font-size:28px; }
+  .subtitle { font-size:9px; margin:6px 0 13px; }
+  .metrics { margin-bottom:12px; }
+  .metrics div { padding:8px 0; gap:4px; }
+  .metrics div:nth-child(2) { padding-left:9px; }
+  .metrics span { font-size:5px; }
+  .metrics strong { font-size:7px; }
+  .description { max-width:188px; font-size:9px; line-height:1.45; }
+
+  .control-dock { bottom:27px; min-height:40px; padding:4px; gap:2px; }
+  .control,
+  .icon-control { height:30px; gap:5px; padding:0 7px; font-size:5px; letter-spacing:.08em; }
+  .control svg { width:14px; height:14px; }
+  .icon-control { width:30px; padding:0; }
+  .divider { height:18px; margin:0 1px; }
+  .segmented { gap:1px; }
+  .segmented button { height:30px; padding:0 7px; font-size:5px; }
+  footer { height:20px; padding:0 7px; gap:18px; font-size:5px; }
+}
