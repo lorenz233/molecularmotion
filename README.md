@@ -24,7 +24,7 @@ tracking.
 
 - React and TypeScript
 - Three.js for 3D rendering
-- Vinext and Vite for the application runtime
+- Vite for the static application build
 - PubChem PUG REST API for molecule data
 - MediaPipe Tasks Vision for hand tracking
 - GitHub Actions and GitHub Pages for deployment
@@ -61,6 +61,11 @@ https://lorenz233.github.io/molecularmotion/
 
 In the repository settings, make sure **Settings → Pages → Source** is set to
 **GitHub Actions**.
+
+The deployed site is entirely client-side: the 3D viewer, molecule search,
+MediaPipe hand tracking, landmark overlay, visual modes, and momentum release
+all run in the browser. PubChem is queried directly from the browser, so no
+server or Cloudflare runtime is required.
 
 ## Project structure
 
