@@ -67,3 +67,48 @@ button { font:inherit;color:inherit; }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}}
 .hand-video.minimized-video{display:none}
 .hand-video-wrap{position:relative;width:100%;aspect-ratio:4 / 3;border:1px solid rgba(255,255,255,.13);border-radius:2px;overflow:hidden;background:#050505}.hand-video-wrap .hand-video,.hand-video-wrap .hand-overlay{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}.hand-video-wrap .hand-video{border:0;border-radius:0;transform:scaleX(-1)}.hand-overlay{transform:scaleX(-1);pointer-events:none}.hand-panel.minimized .hand-video-wrap{display:none}
+
+/* Keep the desktop chrome subordinate to the molecule at wide viewport sizes. */
+@media (min-width: 761px) {
+  .topbar { height:64px; padding:0 24px; }
+  .brand { gap:10px; font-size:10px; }
+  .brand-orbit { width:30px; height:30px; }
+  .about-button { gap:7px; padding:8px 11px; font-size:7px; }
+  .molecule-search { top:14px; width:min(450px,40vw); height:35px; gap:8px; padding-left:12px; }
+  .molecule-search button { width:27px; height:27px; }
+
+  .molecule-rail,
+  .viewer-wrap { top:64px; }
+  .molecule-rail { width:138px; padding:26px 16px; }
+  .molecule-rail > p { margin-bottom:22px; }
+  .rail-item { height:72px; }
+  .rail-item.active::before { top:26px; height:18px; }
+  .rail-number { top:12px; left:6px; }
+  .rail-name { left:6px; bottom:12px; }
+  .mini-molecule { right:0; top:24px; transform:scale(.72); transform-origin:right center; }
+
+  .trip-field,
+  .laser-field { inset:64px 0 24px; }
+  .index-marker { top:26px; left:164px; font-size:38px; }
+  .molecule-copy { width:280px; right:28px; top:104px; padding:22px; }
+  .eyebrow { margin-bottom:18px; }
+  .molecule-copy h1 { max-width:240px; font-size:clamp(32px,3vw,48px); }
+  .subtitle { font-size:12px; margin:9px 0 20px; }
+  .metrics { margin-bottom:18px; }
+  .metrics div { padding:11px 0; gap:6px; }
+  .metrics div:nth-child(2) { padding-left:12px; }
+  .description { max-width:236px; font-size:11px; line-height:1.6; }
+
+  .control-dock { bottom:40px; min-height:57px; padding:7px; gap:4px; }
+  .control,
+  .icon-control { height:41px; gap:8px; padding:0 12px; font-size:7px; }
+  .icon-control { width:41px; padding:0; }
+  .divider { height:24px; margin:0 3px; }
+  .segmented { gap:2px; }
+  .segmented button { height:41px; padding:0 11px; font-size:7px; }
+  .drag-hint { bottom:75px; font-size:6px; }
+
+  .hand-panel { left:16px; bottom:92px; width:164px; }
+  .hand-panel.minimized { width:142px; }
+  footer { height:24px; padding:0 16px; gap:28px; }
+}
